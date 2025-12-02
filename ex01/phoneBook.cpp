@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpflegha <jpflegha@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: jpflegha <jpflegha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 04:16:59 by jpflegha          #+#    #+#             */
-/*   Updated: 2025/11/27 20:08:18 by jpflegha         ###   ########.fr       */
+/*   Updated: 2025/12/02 16:04:37 by jpflegha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,55 @@ static  std::string truncation(const std::string &str)
 }
 void    PhoneBook::addContact()
 {
-    std::string input;
+    std::string input = "";
+    while (input == "")
+    {
 
-    std::cout << "What is the first name ?\n";
-    std::getline(std::cin, input);
-    contacts[next].setFirstName(input);
+        std::cout << "What is the first name ?\n";
+        std::getline(std::cin, input);
+        contacts[next].setFirstName(input);
+        
+    }
+    
+    input = "";
+    while (input == "")
+    {
+        
+        std::cout << "What is the last name ?\n";
+        std::getline(std::cin, input);
+        contacts[next].setLastName(input);
+        
+    }
+    
+    input = "";
+    while (input == "")
+    {
 
-    std::cout << "What is the last name ?\n";
-    std::getline(std::cin, input);
-    contacts[next].setLastName(input);
+        std::cout << "What is the nickname ?\n";
+        std::getline(std::cin, input);
+        contacts[next].setNickname(input);
+        
+    }
+    input = "";
 
-    std::cout << "What is the nickname ?\n";
-    std::getline(std::cin, input);
-    contacts[next].setNickname(input);
+    while (input == "")
+    {
 
-    std::cout << "What is the Phone number ?\n";
-    std::getline(std::cin, input);
-    contacts[next].setPhoneNumber(input);
+        input = "";
+        std::cout << "What is the Phone number ?\n";
+        std::getline(std::cin, input);
+        contacts[next].setPhoneNumber(input);
 
-    std::cout << "What is the Darkest secret ?\n";
-    std::getline(std::cin, input);
-    contacts[next].setDarkestSecret(input);
+    }
+    
+    input = "";
+    while (input == "")
+    {
+        std::cout << "What is the Darkest secret ?\n";
+        std::getline(std::cin, input);
+        contacts[next].setDarkestSecret(input);
+
+    }
 
     if (count < 8)
         count++;
