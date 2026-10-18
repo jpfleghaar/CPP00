@@ -21,7 +21,8 @@ int main()
     while (42)
     {
         std::cout   << "Enter ADD for adding a new contact. SEARCH for, you now and EXIT is for, do i realy have to tell you? \n";
-        std::getline(std::cin, cmd);
+        if (!std::getline(std::cin, cmd))
+            break;
         if (cmd == "ADD")
             phoneBook.addContact();
         else if (cmd == "SEARCH")

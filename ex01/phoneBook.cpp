@@ -30,7 +30,8 @@ void    PhoneBook::addContact()
     {
 
         std::cout << "What is the first name ?\n";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return ;
         contacts[next].setFirstName(input);
         
     }
@@ -40,7 +41,8 @@ void    PhoneBook::addContact()
     {
         
         std::cout << "What is the last name ?\n";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return ;
         contacts[next].setLastName(input);
         
     }
@@ -50,7 +52,8 @@ void    PhoneBook::addContact()
     {
 
         std::cout << "What is the nickname ?\n";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return ;
         contacts[next].setNickname(input);
         
     }
@@ -61,7 +64,8 @@ void    PhoneBook::addContact()
 
         input = "";
         std::cout << "What is the Phone number ?\n";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return ;
         contacts[next].setPhoneNumber(input);
 
     }
@@ -70,7 +74,8 @@ void    PhoneBook::addContact()
     while (input == "")
     {
         std::cout << "What is the Darkest secret ?\n";
-        std::getline(std::cin, input);
+        if (!std::getline(std::cin, input))
+            return ;
         contacts[next].setDarkestSecret(input);
 
     }
