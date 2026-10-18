@@ -1,0 +1,17 @@
+# Build artifacts
+*.o
+*.d
+ex00/megaphone
+ex01/MyAwesomePhoneBook
+ex02/TheJobOfYourDreams
+
+# Files created by the exercises at runtime
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Secrets
+.env
+secrets/
