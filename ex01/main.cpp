@@ -20,7 +20,7 @@ int main()
     std::cout   << "Welcome to the Awesome Phone Book!!!" <<std::endl;
     while (42)
     {
-        std::cout   << "Enter ADD for adding a new contact. SEARCH for, you now and EXIT is for, do i realy have to tell you? \n";
+        std::cout   << "Enter ADD to add a new contact, SEARCH to look one up, or EXIT to quit.\n";
         if (!std::getline(std::cin, cmd))
             break;
         if (cmd == "ADD")
