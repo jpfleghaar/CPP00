@@ -1,6 +1,6 @@
 # C++ Module 00 — Namespaces, classes, I/O streams
 
-First steps in C++ (C++98): classes, member functions, `std::string` and formatted output with iostreams.
+First steps in C++: classes, member functions, `std::string` and formatted output with iostreams.
 
 *This project was created as part of the 42 curriculum by jpflegha.*
 
@@ -21,7 +21,7 @@ First steps in C++ (C++98): classes, member functions, `std::string` and formatt
 
 ## Build and run
 
-Each exercise has its own Makefile (compiled with `c++ -Wall -Wextra -Werror -std=c++98`).
+Each exercise has its own Makefile (compiled with `c++ -Wall -Wextra -Werror -std=c++17`; ex02 uses `-std=c++98`).
 
 ```bash
 git clone https://github.com/jpfleghaar/CPP00.git
